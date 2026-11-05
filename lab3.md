@@ -255,8 +255,21 @@ And for a goal state:
  #### So the key rule is:
 
 - h(goal) = 0 is required because the goal is already solved, and a heuristic must never overestimate the remaining cost to reach that goal.
+  ## Section 5:
+ ## Analysis
+  <img width="691" height="185" alt="image" src="https://github.com/user-attachments/assets/ac83d5d5-5268-4900-9f68-692f54789d6c" />
+ <img width="736" height="479" alt="image" src="https://github.com/user-attachments/assets/6b3f383f-a9ce-47af-8381-21ec9caf46e6" />
+
+
+
 ## Question 5: At what scramble depth does the gap between the two heuristics become clearly visible? Why does the gap widen as depth increases rather than staying constant?
 ## Answer
 The exact depth depends on the scrambles generated and the results in your table. In general, the difference often becomes noticeable at moderate depths, around 10–15 moves. Use your Cell 16 results to identify where it becomes clear in your experiment.
 
 The gap widens because Misplaced Tiles only counts how many tiles are out of place, while Manhattan Distance also measures how far each tile is from its goal position. As puzzles become harder, that distance information helps Manhattan Distance guide A* more effectively, so it typically expands fewer nodes than Misplaced Tiles.
+## Question 6:Using the lecture's definition of admissibility, explain why ahigher admissible heuristic is not a violation of admissibility,and why it leads to fewer node expansions.
+### Answer
+A heuristic is admissible if it never overestimates the true minimum cost to reach the goal: (h(n) \leq h^(n)). Manhattan Distance is greater than or equal to Misplaced Tiles, but it is still admissible because it also never exceeds the true remaining cost. A higher admissible heuristic gives A a more accurate estimate of how far a state is from the goal. This helps A* prioritize more promising states and usually expand fewer nodes before finding an optimal solution.
+
+
+
