@@ -8,8 +8,8 @@ For the original maze, both BFS and DFS found the same shortest path:
 
 | Algorithm | Path Length | Maximum Frontier |
 |---|---:|---:|
-| BFS | 8 | 2 |
-| DFS | 8 | 2 |
+| BFS | 8 | 3|
+| DFS | 8 | 3 |
 
 ### Explanation
 - BFS explores the maze level by level using a queue.
