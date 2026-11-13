@@ -75,3 +75,25 @@ def evaluate_student(student_record, kb):
         "status": "Invalid Score Entry",
         "action": "Verify submitted marks with the exam department."
     }
+```
+**Example Output:**
+
+```text
+--- EVALUATING STUDENT: Ali Khan (ID: BSCS-2024-012) ---
+Evaluating RULE_01: {'attendance_percentage': 74}
+Evaluating RULE_02: {'marks_min': 85, 'marks_max': 100}
+Rule RULE_02 matched!
+Grade: A | Status: Passed with Distinction
+Advisory Action: Recommended for Merit Scholarship.
+```
+
+**Result:** The inference engine now displays the rules being evaluated and identifies the matching rule during the deduction process.
+
+---
+
+### Conclusion
+
+Both hands-on exercises have been implemented:
+
+- **Exercise 1:** Extended the Knowledge Base by adding a new degree honors production rule.
+- **Exercise 2:** Modified the Inference Engine to display rule evaluation and demonstrate step-by-step logical deduction.
