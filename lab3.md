@@ -105,11 +105,8 @@ print(manhattan_distance(test_state))   # Output: 1
 
 - In the test state, only tile 8 is one step away from its goal position.
 - So the Manhattan distance is 1.
-- If you want, I can continue with:
-
 ## Question 3: Implement A* search
 ### The function should:
-
 - Use a priority queue ordered by f(n) = g(n) + h(n)
 - Keep track of the best known cost for each state
 - Expand the lowest-cost node
